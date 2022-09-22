@@ -20,16 +20,12 @@ import java.util.*
 class VariantAdapter: RecyclerView.Adapter<VariantAdapter.MainViewHolder>() {
     private var listItemData: List<ListItem> = listOf()
     private var onItemViewClickListener: MainFragment.OnItemViewClickListener? = null
-    private var items: List<ListItem> = listOf()
     //выделить все цвета в ресурсы
-
-
 
     @SuppressLint("NotifyDataSetChanged")
     fun setListItem(data: List<ListItem>) {
         listItemData = data
         notifyDataSetChanged()
-
     }
 
     fun setOnItemViewClickListener(onItemViewClickListener: MainFragment.OnItemViewClickListener) {
@@ -49,15 +45,10 @@ class VariantAdapter: RecyclerView.Adapter<VariantAdapter.MainViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-
-
             holder.bind(listItemData[position])
-
         if (GlobalConstAndVars.ANSWER_CLICKED.value=="") {
             holder.itemView.question_recycler_item.setBackgroundColor(Color.parseColor("#F3EFEF"))
         }
-
-
 
         if (listItemData[position].value == GlobalConstAndVars.ANSWER_CLICKED.value&&GlobalConstAndVars.ANSWER_CLICKED.value!="") {
             holder.itemView.question_recycler_item.setBackgroundColor(Color.parseColor("#4CAF50"))
@@ -67,12 +58,6 @@ class VariantAdapter: RecyclerView.Adapter<VariantAdapter.MainViewHolder>() {
 
 
                 holder.itemView.question_recycler_item.setBackgroundColor(Color.RED)
-
-
-
-
-
-
         }
         if (listItemData[position].value == GlobalConstAndVars.RIGHT_ANSWER.value&&GlobalConstAndVars.ANSWER_CLICKED.value=="wrong") {
             holder.itemView.question_recycler_item.setBackgroundColor(Color.parseColor("#4CAF50"))

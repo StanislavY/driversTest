@@ -40,7 +40,7 @@ class FirebaseCaseImpl:FireBaseCase {
             var resumed = false
 
 
-            /*var listFromCloud:MutableList<ServerResponseDataFireBase> = mutableListOf()*/
+
 
             remoteDB.collection(collectionsName)
                 .get()

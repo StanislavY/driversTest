@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "921554426944",
+    "project_id": "driverstest-792a1",
+    "storage_bucket": "driverstest-792a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:921554426944:android:1590c662045f908b0593a5",
+        "android_client_info": {
+          "package_name": "abraudurso.order"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "921554426944-ge0iokh8f7fl0jm246ha3h39qprrmho8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZwduEYtp3zU17HPoOTYxk3V4gXioBNRg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "921554426944-ge0iokh8f7fl0jm246ha3h39qprrmho8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -46,14 +46,7 @@ class MainFragmentAdapter:RecyclerView.Adapter<MainFragmentAdapter.MainViewHolde
         RecyclerView.ViewHolder(binding.root) {
         @SuppressLint("SetTextI18n")
         fun bind(listItem: ListItem) {
-
             val textForItem:String =   listItem.documentFB
-
-
-
-
-
-
 
             binding.apply {
 

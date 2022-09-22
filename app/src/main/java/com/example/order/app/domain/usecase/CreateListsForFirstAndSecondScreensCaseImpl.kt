@@ -16,12 +16,7 @@ class CreateListsForFirstAndSecondScreensCaseImpl: CreateListsForFirstAndSecondS
               GlobalConstAndVars.TICKETS_LIST=ticketList
               res.resume(ticketList)
 
-
-
           }
-
-
-
 
     }
 
