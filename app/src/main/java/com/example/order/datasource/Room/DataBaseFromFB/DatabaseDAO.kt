@@ -1,32 +1,32 @@
-package com.example.order.datasource.Room.DataBaseFrom1C
+package com.example.order.datasource.Room.DataBaseFromFB
 
 import android.database.Cursor
 import androidx.room.*
 import com.example.order.datasource.Room.DatabaseResult.ResultEntity
 
 @Dao
-interface DatabaseFrom1CDAO {
+interface DatabaseDAO {
 
-        @Query("SELECT*FROM DatabaseFrom1CEntity")
-        fun all1C():List<DatabaseFrom1CEntity>
+        @Query("SELECT*FROM DatabaseEntity")
+        fun all1C():List<DatabaseEntity>
 
 
         @Insert(onConflict = OnConflictStrategy.REPLACE)
-        fun insert(entity: DatabaseFrom1CEntity)
+        fun insert(entity: DatabaseEntity)
 
         @Update
-        fun update(entity: DatabaseFrom1CEntity)
+        fun update(entity: DatabaseEntity)
 
         @Delete
-        fun delete (entity: DatabaseFrom1CEntity)
+        fun delete (entity: DatabaseEntity)
 
-        @Query("DELETE FROM DatabaseFrom1CEntity")
+        @Query("DELETE FROM DatabaseEntity")
         fun deleteall()
 
-        @Query("SELECT id1, dataType, ticketNumber FROM DatabaseFrom1CEntity")
+        @Query("SELECT id1, dataType, ticketNumber FROM DatabaseEntity")
         fun getHistoryCursor(): Cursor
 
-        @Query("SELECT id1, dataType, ticketNumber FROM DatabaseFrom1CEntity WHERE id1 = :id1&dataType=:id2")
+        @Query("SELECT id1, dataType, ticketNumber FROM DatabaseEntity WHERE id1 = :id1&dataType=:id2")
         fun getHistoryCursor(id1: Int,id2:Int): Cursor
 
         @Query("SELECT*FROM ResultEntity WHERE value=''")

@@ -1,7 +1,6 @@
 package com.example.order.core
 
 import com.example.order.app.domain.model.ListItem
-import com.example.order.datasource.Server.ServerResponseData
 
 object GlobalConstAndVars {
     val DEFAULT_LIST_ITEM=ListItem("","","","","","")
@@ -24,14 +23,8 @@ object GlobalConstAndVars {
     var ANSWER_LIST:List<ListItem> = mutableListOf()
     var listItemFromDb:List<ListItem> = mutableListOf()
     var LIST_OF_CHOSEN_ITEMS: MutableList<ListItem> = mutableListOf()
-    var DATABASE1C_NAME: String = "Database1C.db"
-    const val STEP_FOR_WORKED_HOURS=1.0
-    const val NUMBERS_OF_VALUES_FOR_WORKED_HOURS=50
-    val DEFAULT_lIST= listOf(ListItem("","","","","",""))
-
+    const val DATABASE_NAME: String = "Database1C.db"
+    private val DEFAULT_lIST= listOf(ListItem("","","","","",""))
     var GLOBAL_LIST= DEFAULT_lIST
-    const val DEFAULT_VALUE_FOR_GENERATED_LIST=""
-    var LIST_OF_FINISHED_ORDERS = listOf<ServerResponseData>()
-    const val MARKER_OF_FINISHED_ORDER="1"
 
 }

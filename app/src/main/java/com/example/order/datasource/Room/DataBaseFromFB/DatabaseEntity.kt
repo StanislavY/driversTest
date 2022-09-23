@@ -1,10 +1,10 @@
-package com.example.order.datasource.Room.DataBaseFrom1C
+package com.example.order.datasource.Room.DataBaseFromFB
 
 import androidx.room.Entity
 
 
 @Entity(primaryKeys = ["id1","dataType","ticketNumber"])
-data class DatabaseFrom1CEntity(
+data class DatabaseEntity(
 
     var id1: String,
     var dataType: String,
