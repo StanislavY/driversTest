@@ -5,136 +5,119 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".ui.main.MainFragment"
     android:background="#80FAF6F6"
+    tools:context=".ui.main.MainFragment">
 
-
-    >
-   <com.google.android.material.textview.MaterialTextView
-
-       android:layout_marginStart="30dp"
-
-
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/theme"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="@dimen/margin_top_main"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/text_size_main_head"
-       tools:text="Билет 1, Вопрос 1"
-
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="@dimen/margin_top_main"
         android:textColor="@color/black"
+        android:textSize="@dimen/text_size_main_head"
+        android:textStyle="bold"
 
-        android:textStyle="bold">
+        app:layout_constraintTop_toTopOf="parent"
+
+        tools:text="Билет 1, Вопрос 1">
 
 
     </com.google.android.material.textview.MaterialTextView>
 
     <LinearLayout
-        android:paddingTop="@dimen/margin_lines"
         android:id="@+id/linear_layout"
-        app:layout_constraintTop_toBottomOf="@id/theme"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:paddingTop="@dimen/margin_lines"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/theme"
 
         >
-        <androidx.recyclerview.widget.RecyclerView
 
+        <androidx.recyclerview.widget.RecyclerView
 
             android:id="@+id/mainFragmentRecyclerView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="@id/theme"
-            app:layout_constraintStart_toStartOf="parent"
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-
-
-
-
-
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/theme"
             tools:listitem="@layout/main_item">
 
 
         </androidx.recyclerview.widget.RecyclerView>
 
 
-
-
-
     </LinearLayout>
 
 
-        <com.google.android.material.card.MaterialCardView
+    <com.google.android.material.card.MaterialCardView
 
 
-            android:id="@+id/questions_text"
-            android:outlineSpotShadowColor="@color/black"
-            app:layout_constraintTop_toBottomOf="@id/linear_layout"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="@dimen/margin_lines"
+        android:id="@+id/questions_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_lines"
+        android:outlineSpotShadowColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-           >
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-              <com.google.android.material.textview.MaterialTextView
-                android:layout_marginStart="@dimen/margin_left_main"
-                android:layout_marginEnd="@dimen/margin_right_main"
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/questions_text_text_view"
+                style="@style/CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_left_main"
                 android:layout_marginTop="@dimen/margin_top_main"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:text="Какой-то вопрос о правилах дорожного движения"
+                android:layout_marginEnd="@dimen/margin_right_main"
+                android:textColor="@color/black"
                 android:textSize="@dimen/question_size"
                 android:textStyle="bold"
-                android:textColor="@color/black"
-                style="@style/CardView">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Какой-то вопрос о правилах дорожного движения">
 
             </com.google.android.material.textview.MaterialTextView>
 
 
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:layout_marginStart="@dimen/margin_left_main"
-        android:layout_marginEnd="@dimen/margin_right_main"
-        android:id="@id/image"
-        android:layout_marginTop="@dimen/margin_top_main"
-        app:layout_constraintTop_toBottomOf="@id/questions_text_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/questions_layout_height"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:src="@drawable/image3"
-        android:scaleType="fitStart"
-        >
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@id/image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/questions_layout_height"
+                android:layout_marginStart="@dimen/margin_left_main"
+                android:layout_marginTop="@dimen/margin_top_main"
+                android:layout_marginEnd="@dimen/margin_right_main"
+                android:scaleType="fitStart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/questions_text_text_view"
+                tools:src="@drawable/image3">
 
 
-    </com.google.android.material.imageview.ShapeableImageView>
+            </com.google.android.material.imageview.ShapeableImageView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginStart="@dimen/margin_left_main"
-        android:layout_marginEnd="@dimen/margin_right_main"
-        android:id="@+id/questions_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/image"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/questions_item">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/questions_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_left_main"
+                android:layout_marginEnd="@dimen/margin_right_main"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                tools:listitem="@layout/questions_item">
 
 
-    </androidx.recyclerview.widget.RecyclerView>
-            </LinearLayout>
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
 
-        </com.google.android.material.card.MaterialCardView>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
