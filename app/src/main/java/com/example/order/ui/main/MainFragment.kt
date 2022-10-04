@@ -111,10 +111,7 @@ class MainFragment : Fragment() {
         GlobalConstAndVars.CHOSEN_LIST_ITEM = ListItem("", "", "", "", "", "")
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.menu_main_botom_bar, menu)
-    }
+
 
 
     private fun showImage(questionNumber:String): Int {
