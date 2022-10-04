@@ -6,7 +6,7 @@ import com.example.order.core.GlobalConstAndVars
 import com.example.order.repository.LocalRepository
 import com.example.order.repository.LocalRepositoryImpl
 
-class CreateListOfAllItemsFrom1CDBCaseImpl: CreateListOfAllItemsFrom1CDBCase {
+class CreateListOfAllItemsFromDBCaseImpl: CreateListOfAllItemsFromDBCase {
 
     private val localRepository1C: LocalRepository = LocalRepositoryImpl(App.get1CDAO())
 

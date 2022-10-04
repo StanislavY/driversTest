@@ -4,11 +4,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.order.app.domain.model.ListItem
 import com.example.order.app.domain.usecase.AppState
-import com.example.order.app.domain.usecase.CreateListsForFirstAndSecondScreensCase
-import com.example.order.app.domain.usecase.CreateListsForFirstAndSecondScreensCaseImpl
+import com.example.order.app.domain.usecase.HandleAnswersAndQuestionsCase
+import com.example.order.app.domain.usecase.HandleAnswersAndQuestionsCaseImpl
 
 open class MainViewModel(
-    private val createLists: CreateListsForFirstAndSecondScreensCase = CreateListsForFirstAndSecondScreensCaseImpl(),
+    private val createLists: HandleAnswersAndQuestionsCase = HandleAnswersAndQuestionsCaseImpl(),
    ) : ViewModel() {
     private val liveDataToObserve: MutableLiveData<AppState> = MutableLiveData()
     suspend fun processTheSelectedItemTicket() = requestDataTicket()

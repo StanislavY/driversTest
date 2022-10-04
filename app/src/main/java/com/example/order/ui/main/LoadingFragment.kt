@@ -1,11 +1,9 @@
 package com.example.order.ui.main
 
 import android.os.Bundle
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProvider
@@ -23,19 +21,13 @@ class LoadingFragment:Fragment() {
     }
 
     private val fireBase: FireBaseCase =FirebaseCaseImpl()
-    private val load: LoadDataFrom1CCase = LoadDataFrom1CCaseImpl()
-
-
-
-
+    private val load: LoadDataFromDBCase = LoadDataFromDBCaseImpl()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-
 
         _binding= LoadingFragmentBinding.inflate(inflater,container,false)
         return binding.root

@@ -7,7 +7,7 @@ import com.example.order.app.domain.model.ListItem
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
 
-class CreateListsForFirstAndSecondScreensCaseImpl: CreateListsForFirstAndSecondScreensCase {
+class HandleAnswersAndQuestionsCaseImpl: HandleAnswersAndQuestionsCase {
     @RequiresApi(Build.VERSION_CODES.N)
     override suspend fun getTicketsList(key: String): List<ListItem> {
           return suspendCoroutine { res ->

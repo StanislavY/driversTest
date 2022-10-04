@@ -1,12 +1,12 @@
 package com.example.order.viewModel
 
 import androidx.lifecycle.ViewModel
-import com.example.order.app.domain.usecase.CreateListOfAllItemsFrom1CDBCase
-import com.example.order.app.domain.usecase.CreateListOfAllItemsFrom1CDBCaseImpl
+import com.example.order.app.domain.usecase.CreateListOfAllItemsFromDBCase
+import com.example.order.app.domain.usecase.CreateListOfAllItemsFromDBCaseImpl
 
 class LoadingViewModel(
 ):ViewModel() {
-    private val createGlobalListCase: CreateListOfAllItemsFrom1CDBCase = CreateListOfAllItemsFrom1CDBCaseImpl()
+    private val createGlobalListCase: CreateListOfAllItemsFromDBCase = CreateListOfAllItemsFromDBCaseImpl()
       suspend fun getGlobalLIst()
       {
         createGlobalListCase.getListForChoice()
